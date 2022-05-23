@@ -1,6 +1,10 @@
-import { combineReducers } from "redux";
-import assignments from "./testReducer";
+import { combineReducers } from 'redux';
+import authSlice from './authSlice';
+import messageSlice from './message';
 
-export default combineReducers({
-    assignments
+const rootReducer = combineReducers({
+    auth: authSlice.reducer,
+    message: messageSlice.reducer
 });
+
+export default rootReducer;
